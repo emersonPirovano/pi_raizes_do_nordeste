@@ -1,0 +1,12 @@
+# Arquivos Não enviados ao GIT
+.venv/
+venv/
+env/
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vscode/
+.DS_Store
+Thumbs.db
+README.md
