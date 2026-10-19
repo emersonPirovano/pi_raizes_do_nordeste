@@ -3,6 +3,7 @@ from app.base.config import settings
 from app.db.database import test_database_connection
 from app.modulos.lojas.rotas import router as lojas_rotas
 from app.modulos.produtos.rotas import router as produtos_rotas
+from app.modulos.cardapios.rotas import router as cardapios_rotas
 
 app = FastAPI(
     title=settings.APP_NAME,
@@ -16,6 +17,11 @@ app.include_router(
 
 app.include_router(
     produtos_rotas,
+    prefix="/api/v1"
+)
+
+app.include_router(
+    cardapios_rotas, 
     prefix="/api/v1"
 )
 
