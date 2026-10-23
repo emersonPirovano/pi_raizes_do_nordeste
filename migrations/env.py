@@ -7,6 +7,8 @@ from app.db.database import Base, engine, DATABASE_URL
 from app.modulos.lojas import model_db as lojas_model
 from app.modulos.produtos import model_db as produtos_model
 from app.modulos.cardapios import model_db as cardapios_model
+from app.modulos.estoque import model_db as estoque_model
+from app.modulos.clientes import model_db as cliente_model
 
 
 config = context.config
