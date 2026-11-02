@@ -6,6 +6,9 @@ from app.modulos.produtos.rotas import router as produtos_rotas
 from app.modulos.cardapios.rotas import router as cardapios_rotas
 from app.modulos.estoque.rotas import router as estoque_rotas
 from app.modulos.clientes.rotas import router as cliente_rotas
+from app.modulos.pedidos.rotas import router as pedidos_rotas
+from app.modulos.pagamentos.rotas import router as pagamentos_rotas
+from app.modulos.fidelidade.rotas import router as fidelidade_rotas
 
 app = FastAPI(
     title=settings.APP_NAME,
@@ -36,6 +39,23 @@ app.include_router(
     cliente_rotas, 
     prefix="/api/v1"
 )
+
+app.include_router(
+    pedidos_rotas, 
+    prefix="/api/v1"
+)
+
+app.include_router(
+    pagamentos_rotas, 
+    prefix="/api/v1"
+)
+
+app.include_router(
+    fidelidade_rotas,
+    prefix="/api/v1"
+)
+
+
 
 @app.get("/", tags=["Geral"])
 def root():

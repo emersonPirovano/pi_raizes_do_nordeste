@@ -9,6 +9,9 @@ from app.modulos.produtos import model_db as produtos_model
 from app.modulos.cardapios import model_db as cardapios_model
 from app.modulos.estoque import model_db as estoque_model
 from app.modulos.clientes import model_db as cliente_model
+from app.modulos.pedidos import model_db as pedidos_model
+from app.modulos.pagamentos import model_db as pagamentos_model
+from app.modulos.fidelidade import model_db as fidelidade_model
 
 
 config = context.config
